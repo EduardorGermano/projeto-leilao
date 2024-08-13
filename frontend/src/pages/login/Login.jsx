@@ -5,14 +5,30 @@ import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 
-const Login = () =>{
+const Login = () => {
 
-    return(
-        <div>
+    return (
+        <div className="Body">
             <Card title="Login">
-                <InputText/>
-                <Password feedback={false}/>
-                <Button label="Login" />
+                <div className="grid">
+                    <div className="field col-12">
+                        <label for="E-Mail">E-Mail:</label><br/>
+                        <InputText placeholder="E-Mail" />
+                    </div>
+                    <div className="field col-12">
+                        <label for="Senha">Senha:</label><br/>
+                        <Password feedback={false} placeholder="Senha" toggleMask />
+                    </div>
+                    <div className="col-fixed">
+                        <Button label="Login" />
+                    </div>
+                    <div className="col-fixed">
+                        <Button label="Recuperar Senha" />
+                    </div>
+                    <div className="col-fixed">
+                        <Button label="Cadastrar-se" />
+                    </div>
+                </div>
             </Card>
         </div>
     );

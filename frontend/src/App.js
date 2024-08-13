@@ -6,19 +6,19 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import DefaultLayout from './components/DefaultLayout';
 import SimpleLayout from './components/SimpleLayout';
+import NewLogin from './pages/login/NewLogin';
 
 
 function App() {
   return (
    <>
-    {/* <Header/> */}
       <BrowserRouter>
         <Routes>
             <Route path='/' element={<DefaultLayout><Home/></DefaultLayout>}/>
-            <Route path='/login'element={<SimpleLayout><Login/></SimpleLayout>} />
+            <Route path='/login' element={<SimpleLayout><Login/></SimpleLayout>} />
+            <Route path='/cadastro' element={<SimpleLayout><NewLogin/></SimpleLayout>} />
         </Routes>
       </BrowserRouter>
-    {/*<Footer/>*/}
    </>
   );
 }
